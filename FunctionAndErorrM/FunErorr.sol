@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.17;
-
+pragma solidity ^0.8.19;
 
 error CANT_WIDTHDREW_THIS_AMOUNT();
 error BALANCEOF_OWNER_MOST_BE_MORE_THAN_ZERO();
@@ -19,7 +18,7 @@ contract FunctionANDError {
     }
 
     function chick(address _userIf, uint256 _num) external payable {
-        require(_userIf == address(0), 'address zero not valid');
+        require(_userIf == address(0), "address zero not valid");
         require(msg.value > 0, "amount most be more than zero");
         user[_userIf] += _num;
     }
